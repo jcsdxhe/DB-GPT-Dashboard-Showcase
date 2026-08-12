@@ -1,0 +1,54 @@
+# DB-GPT Dashboard 最终交付态交互展厅
+
+这是“基于 Agent 的数据看板生成与发布”项目的**可交互目标原型**。页面采用 DB-GPT 的视觉语言，完整展示自然语言生成、看板编辑、筛选联动、刷新、局部失败、修订冲突、发布、只读分享和平台能力。
+
+## 在线体验
+
+- 主展厅：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart>
+- Apple 案例：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=apple>
+
+页面为纯静态站点，不要求登录、模型密钥或数据库服务器，支持现代桌面和手机浏览器。
+
+## 真实可查询的演示数据库
+
+Walmart 案例随站点发布 `walmart_sales.db`：
+
+- SQLite 数据库，520 行合成周销售记录；
+- 时间范围为 2011-01-07 至 2012-12-28；
+- 在浏览器内通过 SQLite WebAssembly 真实执行 SQL；
+- 查询台仅允许 `SELECT`、`WITH` 和 `EXPLAIN QUERY PLAN SELECT`；
+- 写入、多语句和数据库管理命令会被拒绝；
+- 可直接下载 `.db` 文件，用 SQLite 工具自行检查。
+
+打开主展厅后点击顶部 **“数据源”** 即可现场查询。
+
+## 在另一台电脑本地运行
+
+需要安装 Git 与 Python 3。
+
+```bash
+git clone https://github.com/jcsdxhe/DB-GPT-Dashboard-Showcase.git
+cd DB-GPT-Dashboard-Showcase
+python start-local.py
+```
+
+然后打开终端显示的地址：
+
+```text
+http://127.0.0.1:8000/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart
+```
+
+停止服务时按 `Ctrl+C`。这套启动方式不需要 `npm install`，适合导师电脑离线验收。
+
+## 演示边界
+
+- 看板编辑、发布和分享状态保存在当前浏览器的 `localStorage`；点击“异常演示与重置 → 一键重置演示”可恢复默认状态。
+- “Agent 生成”是按真实事件名称制作的确定性重播，以保证沟通演示稳定；不是在公开网页中调用付费模型。
+- Walmart 是可复现的合成数据，不代表真实经营结论。
+- Apple 是 SEC 10-K 公开数据快照，不构成投资建议。
+- 只读分享页读取发布时冻结的本地快照，不会匿名连接数据库。
+
+## 许可与致谢
+
+本展示站基于 DB-GPT 项目的界面和技术体系进行独立原型开发，保留上游 MIT License。图表、组件和交互用于 OSPP 项目方案沟通与工程验证。
+
