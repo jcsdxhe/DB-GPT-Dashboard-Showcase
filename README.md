@@ -13,7 +13,7 @@
 
 ## 维护
 
-首页源码保存在 `src/index.html`。执行 `node scripts/productize-showcase.mjs` 会更新根首页，并统一清理导出页面中的旧演示文案。
+首页源码保存在 `src/index.html`。执行 `node scripts/productize-showcase.mjs` 会更新根首页，并统一清理导出页面中的旧展示文案。
 
 ## 在线体验
 
