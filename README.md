@@ -1,10 +1,23 @@
-# DB-GPT Dashboard 最终交付态交互展厅
+# DB-GPT 数据看板公开浏览版
 
-这是“基于 Agent 的数据看板生成与发布”项目的**可交互目标原型**。页面采用 DB-GPT 的视觉语言，完整展示自然语言生成、看板编辑、筛选联动、刷新、局部失败、修订冲突、发布、只读分享和平台能力。
+这是“基于 Agent 的数据看板生成与发布”项目的公开浏览版。页面采用 DB-GPT 的视觉语言，展示自然语言生成、看板编辑、筛选联动、刷新、局部失败、修订冲突、发布、只读分享和看板管理能力。
+
+公开页面使用内置示例数据，不连接业务数据库。完整 Lab 版本中的草稿、权限、审计、发布版本、分享生命周期和定时任务均由真实后端接口提供。
+
+## 页面
+
+- `/`：数据看板首页与全部看板管理入口。
+- `/dashboards/showcase/?case=walmart`：Walmart 门店经营看板。
+- `/dashboards/showcase/?case=apple`：Apple 财务分析看板。
+- `/dashboard-share/showcase/`：只读发布快照。
+
+## 维护
+
+首页源码保存在 `src/index.html`。执行 `node scripts/productize-showcase.mjs` 会更新根首页，并统一清理导出页面中的旧演示文案。
 
 ## 在线体验
 
-- 主展厅：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart>
+- Walmart 工作台：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart>
 - Apple 案例：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=apple>
 
 页面为纯静态站点，不要求登录、模型密钥或数据库服务器，支持现代桌面和手机浏览器。
@@ -50,5 +63,5 @@ http://127.0.0.1:8000/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmar
 
 ## 许可与致谢
 
-本展示站基于 DB-GPT 项目的界面和技术体系进行独立原型开发，保留上游 MIT License。图表、组件和交互用于 OSPP 项目方案沟通与工程验证。
+本展示站基于 DB-GPT 项目的界面和技术体系进行独立原型开发，保留上游 MIT License。图表、组件和交互用于数据分析产品能力与工程实现验证。
 
