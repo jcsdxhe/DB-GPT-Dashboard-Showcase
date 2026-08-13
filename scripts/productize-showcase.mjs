@@ -4,7 +4,7 @@ import path from 'node:path';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const copyScript = '<script src="/DB-GPT-Dashboard-Showcase/product-copy.js" defer></script>';
-const favicon = '<link rel="icon" href="/DB-GPT-Dashboard-Showcase/LOGO.png"/>';
+const favicon = '<link rel="icon" href="/DB-GPT-Dashboard-Showcase/LOGO_SMALL.png"/>';
 const htmlFiles = [
   'dashboards/showcase/index.html',
   'dashboard-share/showcase/index.html',

@@ -10,6 +10,12 @@
     ['DEMO', '示例'],
     ['DB-GPT Dashboard 交互展厅', 'DB-GPT 数据看板'],
     ['返回展厅', '返回数据看板'],
+    ['交互展示环境', '数据分析工作台'],
+    ['当前演示', '最近访问'],
+    ['异常演示与重置', '状态与重置'],
+    ['合成演示数据', '合成示例数据'],
+    ['只用于功能演示', '仅用于功能说明'],
+    ['演示', '工作区'],
   ];
 
   const replace = value => {
@@ -28,6 +34,14 @@
         if (updated !== node.nodeValue) node.nodeValue = updated;
       }
       node = walker.nextNode();
+    }
+
+    const elements = root.nodeType === Node.ELEMENT_NODE ? [root, ...root.querySelectorAll('[aria-label],[title]')] : [];
+    for (const element of elements) {
+      for (const attribute of ['aria-label', 'title']) {
+        const value = element.getAttribute(attribute);
+        if (value) element.setAttribute(attribute, replace(value));
+      }
     }
   };
 
