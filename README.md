@@ -7,6 +7,8 @@
 ## 页面
 
 - `/`：数据看板首页与全部看板管理入口。
+- `/dashboards/showcase-v2/?case=walmart`：AI 批注式可视编辑候选版（Walmart）。
+- `/dashboards/showcase-v2/?case=apple`：AI 批注式可视编辑候选版（Apple）。
 - `/dashboards/showcase/?case=walmart`：Walmart 门店经营看板。
 - `/dashboards/showcase/?case=apple`：Apple 财务分析看板。
 - `/dashboard-share/showcase/`：只读发布快照。
@@ -17,10 +19,14 @@
 
 ## 在线体验
 
+- AI 可视编辑候选版（Walmart）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v2/?case=walmart>
+- AI 可视编辑候选版（Apple）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v2/?case=apple>
 - Walmart 工作台：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart>
 - Apple 案例：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=apple>
 
 页面为纯静态站点，不要求登录、模型密钥或数据库服务器，支持现代桌面和手机浏览器。
+
+候选版新增图形/表格元素选择、评论、变更预览与应用、12 类展示层可视化和表格三态排序。助手明确标记为浏览器本地确定性原型，不伪装成真实联网模型。
 
 ## 真实可查询的示例数据库
 
@@ -64,4 +70,3 @@ http://127.0.0.1:8000/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmar
 ## 许可与致谢
 
 本展示站基于 DB-GPT 项目的界面和技术体系进行独立原型开发，保留上游 MIT License。图表、组件和交互用于数据分析产品能力与工程实现验证。
-
