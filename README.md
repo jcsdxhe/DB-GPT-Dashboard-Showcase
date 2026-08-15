@@ -7,6 +7,8 @@
 ## 页面
 
 - `/`：数据看板首页与全部看板管理入口。
+- `/dashboards/showcase-v3/?case=walmart`：任务对话与看板同屏、组件原位批注候选版（Walmart）。
+- `/dashboards/showcase-v3/?case=apple`：任务对话与看板同屏、组件原位批注候选版（Apple）。
 - `/dashboards/showcase-v2/?case=walmart`：AI 批注式可视编辑候选版（Walmart）。
 - `/dashboards/showcase-v2/?case=apple`：AI 批注式可视编辑候选版（Apple）。
 - `/dashboards/showcase/?case=walmart`：Walmart 门店经营看板。
@@ -19,6 +21,8 @@
 
 ## 在线体验
 
+- 任务内批注工作台（Walmart）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v3/?case=walmart>
+- 任务内批注工作台（Apple）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v3/?case=apple>
 - AI 可视编辑候选版（Walmart）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v2/?case=walmart>
 - AI 可视编辑候选版（Apple）：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase-v2/?case=apple>
 - Walmart 工作台：<https://jcsdxhe.github.io/DB-GPT-Dashboard-Showcase/dashboards/showcase/?case=walmart>
@@ -27,6 +31,8 @@
 页面为纯静态站点，不要求登录、模型密钥或数据库服务器，支持现代桌面和手机浏览器。
 
 候选版新增图形/表格元素选择、评论、变更预览与应用、12 类展示层可视化和表格三态排序。助手明确标记为浏览器本地确定性原型，不伪装成真实联网模型。
+
+v3 进一步把数据助理对话与看板放在同一个任务工作台中：左右分栏可拖动、可收起或全屏；选中组件后可直接在蓝色选框旁添加自然语言批注，提交与应用结果会同步回左侧对话。v2 路由和本地状态保持独立，可继续用于对照。
 
 ## 真实可查询的示例数据库
 
